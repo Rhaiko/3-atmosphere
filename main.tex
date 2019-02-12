@@ -14,6 +14,7 @@
 \usepackage{pdfpages}
 \usepackage{hyperref}
 \usepackage{longtable}
+\usepackage{multicol}
 
 % Create a separate table for the appendix.
 \usepackage[toc,page]{appendix}
@@ -644,6 +645,28 @@ Precipitable water [mm] for entire sounding & 13.92 \\
 \newpage
 \section{Plot the profiles of temperature T, dewpoint temperature $T_D$ and relative humidity RH for each of theses dates. (T and $T_D$ in one plot, RH in a separate one) Use a suitable altitude coordinate!}
 
+\begin{tabular}{c c}
+\multicolumn{2}{c}{\textbf{05 Jul 2007 UTC 00:00}}\\ \hline
+Temperature and Dew point & Relative humidity \\ \hline
+\includegraphics[width=0.5\textwidth]{figures/3plot1a.eps} & \includegraphics[width=0.5\textwidth]{figures/3plot1b.eps} 
+
+\end{tabular}
+
+\begin{tabular}{c c}
+\multicolumn{2}{c}{\textbf{05 Jul 2007 UTC 12:00}}\\ \hline
+Temperature and Dew point & Relative humidity \\ \hline
+\includegraphics[width=0.5\textwidth]{figures/3plot2a.eps} & \includegraphics[width=0.5\textwidth]{figures/3plot2b.eps} 
+
+\end{tabular}
+
+\begin{tabular}{c c}
+\multicolumn{2}{c}{\textbf{06 Jul 2007 UTC 00:00}}\\ \hline
+Temperature and Dew point & Relative humidity \\ \hline
+\includegraphics[width=0.5\textwidth]{figures/3plot3a.eps} & \includegraphics[width=0.5\textwidth]{figures/3plot3b.eps} 
+
+\end{tabular}
+
+
 
 
 %----------------------------------------------------------------------------------------
@@ -685,16 +708,12 @@ T_D \approx T - \frac{100 - RH}{5} \label{eq:4-3}
 %	QUESTION 5.
 %----------------------------------------------------------------------------------------
 \newpage
-\section{At which altitude for these data is the tropopause height located? What method do you use to determine the tropopause?}
-The definition of the position of the tropopause, given by the World Meteorological organization, is \cite{wikiQ5}:\\
-\textit{The boundary between the troposphere and the stratosphere, where an abrupt change in lapse rate usually occurs. It is defined as the lowest level at which the lapse rate decreases to 2\,$^\circ$C/km or less, provided that the average lapse rate between this level and all higher levels within 2\,km does not exceed 2\,$^\circ$C/km.}\\
+\section{At which altitude for these data is the tropopause height located?What method do you use to determine the tropopause?}
 
 With the given data in chapter 2, this means that the tropopause altitude of the given dates are located at:\\
 5 July 2007 00Zulu: $\pm$11820\,m.\\
 5 July 2007 12Zulu: $\pm$12619\,m.\\
 6 July 2007 00Zulu: $\pm$12615\,m.\\
-
-
 
 %----------------------------------------------------------------------------------------
 %	QUESTION 6.
