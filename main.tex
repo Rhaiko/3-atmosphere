@@ -12,6 +12,7 @@
 \usepackage{amssymb}
 \usepackage{siunitx}
 \usepackage{pdfpages}
+\usepackage{hyperref}
 \usepackage{longtable}
 
 % Create a separate table for the appendix.
@@ -66,8 +67,7 @@ As can be seen from figure \ref{fig:1}, the grounstation 03808 is located in sou
 \section{Extract the radiosonde profile data for 2007-07-05 0:00 UTC, 12:00 UTC and 2007-07-06 0:00 UTC}
 % http://weather.uwyo.edu/cgi-bin/sounding?region=europe&TYPE=TEXT%3ALIST&YEAR=2007&MONTH=07&FROM=0500&TO=0600&STNM=03808
 The information can be found online by clicking on the following URL:\\
-http://weather.uwyo.edu/cgi-bin/sounding?region=europe\&TYPE=TEXT\%3ALIST\&YEAR=2007\&MONTH=07\\
-\&FROM=0500\&TO=0600\&STNM=03808\\
+\url{http://weather.uwyo.edu/cgi-bin/sounding?region=europe\&TYPE=TEXT%3ALIST&YEAR=2007&MONTH=07&FROM=0500&TO=0600&STNM=03808}\\
 
 The information can also be found on the next page.
 \newpage
@@ -651,6 +651,33 @@ Precipitable water [mm] for entire sounding & 13.92 \\
 %----------------------------------------------------------------------------------------
 \newpage
 \section{How are T and $T_D$ related to each other? Consider RH for your argumentation}
+The dew point temperature ($T_D$) is the temperature of which the air must be cooled to to become saturated with water vapour. This is dependent on the current temperature and the relative humidity (RH). When the temperature increases, it can hold more water vapour and thus the dew point temperature increases for the same relative humidity (RH). When the relative humidity increases, under the same temperature, then the dew point temperature goes up as well. The correlation between these parameters can be seen in figure \ref{fig:Q4}.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{figures/Dewpoint-RH.png}
+	\caption{Air temperature, dewpoint and relative humidity relation \cite{wikiQ4}.}
+	\label{fig:Q4}
+\end{figure}
+
+When cooled below the dew point temperature, the airborne water vapor will condense to form liquid water (dew). When air cools to its dew point through contact with a surface that is colder than the air, water will condense on the surface.\\
+
+The dew point temperature can be calculated using equation \ref{eq:4-1} \cite{wikiQ4}.
+\begin{equation}
+T_D = \frac{c \gamma (T, RH)}{b - \gamma (T, RH)} \label{eq:4-1}
+\end{equation}
+
+With $\gamma (T, RH)$ being given by equation \ref{eq:4-2} \cite{wikiQ4}.
+\begin{equation}
+\gamma (T, RH) = ln \left( \frac{RH}{100} \right) + \frac{bT}{c + T} \label{eq:4-2}
+\end{equation}
+
+The constants $b$ and $c$ are different, dependent on which model is being used. In the NOAA (National Oceanic and Atmospheric Administration) model are: $b = 18.678$ and $c = 257.14$\,$^\circ$C \cite{wikiQ4}.\\
+
+When the relative humidity is above 50\%, equation \ref{eq:4-3} can be used. This approach is accurate to within $\pm$1\,$^\circ$C \cite{wikiQ4}.
+\begin{equation}
+T_D \approx T - \frac{100 - RH}{5} \label{eq:4-3}
+\end{equation}
 
 
 
@@ -674,6 +701,15 @@ Precipitable water [mm] for entire sounding & 13.92 \\
 %----------------------------------------------------------------------------------------
 \newpage
 \section{Plot the data for 2007-07-05, 12:00 UTC as Stuve diagram. What does the Stuve diagram show? What do the different “help lines” mean. What is this type of diagram used for? Use internet resources to find out}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES.
+%----------------------------------------------------------------------------------------
+\newpage				% Start at new page.
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
 
 
 \end{document}
