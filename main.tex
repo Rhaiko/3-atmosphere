@@ -11,6 +11,7 @@
 \usepackage{amsmath}    
 \usepackage{amssymb}
 \usepackage{siunitx}
+\usepackage{pdfpages}
 
 % Create a separate table for the appendix.
 \usepackage[toc,page]{appendix}
@@ -64,8 +65,12 @@ As can be seen from figure \ref{fig:1}, the grounstation 03808 is located in sou
 \newpage
 \section{Extract the radiosonde profile data for 2007-07-05 0:00 UTC, 12:00 UTC and 2007-07-06 0:00 UTC}
 % http://weather.uwyo.edu/cgi-bin/sounding?region=europe&TYPE=TEXT%3ALIST&YEAR=2007&MONTH=07&FROM=0500&TO=0600&STNM=03808
+The information can be found online by clicking on the following URL:\\
+http://weather.uwyo.edu/cgi-bin/sounding?region=europe\&TYPE=TEXT\%3ALIST\&YEAR=2007\&MONTH=07\\
+\&FROM=0500\&TO=0600\&STNM=03808\\
 
-
+The information can also be found on the next page.
+\includepdf[pages=-]{figures/Radiosonde-Data.pdf}
 
 
 %----------------------------------------------------------------------------------------
