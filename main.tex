@@ -1,0 +1,109 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}		% Graphics.
+\usepackage{color}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{matlab-prettifier}
+\usepackage{amsmath}    
+\usepackage{amssymb}
+\usepackage{siunitx}
+
+% Create a separate table for the appendix.
+\usepackage[toc,page]{appendix}
+
+% Table of Content has fast links to sections.
+\usepackage{hyperref}
+
+% Remove dots in table of contents.
+\usepackage[titles]{tocloft}
+\renewcommand{\cftdot}{}
+
+% Page style.
+\usepackage[top=2cm, bottom=2cm, left = 2cm, right = 2cm]{geometry}
+\setlength{\parindent}{0pt}	% Disable indents.
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	Title page.
+%----------------------------------------------------------------------------------------
+\input{chapters/titlepage.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENT.
+%----------------------------------------------------------------------------------------
+\newpage				% Start at new page.
+\pagenumbering{arabic}	% Page numbering reset & style.
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents		% Add table of content.
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 1.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Find Station No. 03808. Which location is this station attributed to? Where is it situated?}
+As can be seen from figure \ref{fig:1}, the grounstation 03808 is located in south west part of England, more specifically in Camborne. 
+
+\begin{figure}[H]
+	\centering
+ 	\includegraphics[width=1\textwidth]{figures/europe.jpg}
+ 	\caption{Europa weather stations.}
+ 	\label{fig:1}
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 2.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Extract the radiosonde profile data for 2007-07-05 0:00 UTC, 12:00 UTC and 2007-07-06 0:00 UTC}
+% http://weather.uwyo.edu/cgi-bin/sounding?region=europe&TYPE=TEXT%3ALIST&YEAR=2007&MONTH=07&FROM=0500&TO=0600&STNM=03808
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 3.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Plot the profiles of temperature T, dewpoint temperature $T_D$ and relative humidity RH for each of theses dates. (T and $T_D$ in one plot, RH in a separate one) Use a suitable altitude coordinate!}
+
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 4.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{How are T and $T_D$ related to each other? Consider RH for your argumentation}
+
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 5.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{At which altitude for these data is the tropopause height located?What method do you use to determine the tropopause?}
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 6.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Describe the some crucial differences between the tropospheric parts of the above plotted profiles. What did probably happen during that date?}
+
+
+
+%----------------------------------------------------------------------------------------
+%	QUESTION 7.
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Plot the data for 2007-07-05, 12:00 UTC as Stuve diagram. What does the Stuve diagram show? What do the different “help lines” mean. What is this type of diagram used for? Use internet resources to find out}
+
+
+\end{document}
